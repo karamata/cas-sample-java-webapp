@@ -19,10 +19,11 @@
 <p>A sample web application that exercises the CAS protocol features via the Java CAS Client.</p>
 <hr>
 
-<p><b>Authenticated User Id:</b> <a href="logout.jsp" title="Click here to log out"><%= request.getRemoteUser() %>
+<p><b>Authenticated User Id:</b> <a href="https://localhost:8443/logout" title="Click here to log out"><%= request.getRemoteUser() %>
 </a></p>
 
 <%
+	System.out.println(request);
     if (request.getUserPrincipal() != null) {
         AttributePrincipal principal = (AttributePrincipal) request.getUserPrincipal();
 
